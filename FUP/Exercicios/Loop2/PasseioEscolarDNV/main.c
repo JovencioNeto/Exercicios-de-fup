@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+void verifyGroup(int quantity);
+
+int main(){
+    int quantity;
+
+    scanf("%d", &quantity);
+
+    verifyGroup(quantity);
+    
+    return 0;
+}
+
+void verifyGroup(int quantity){
+    int i = 0;
+    int age;
+    int young = 0;
+
+    while (i< quantity){
+        scanf("%d", &age);
+
+        if (age < 18){
+            young++;
+        }
+        
+        i ++;
+    }
+    
+    printf("%d\n", young);
+}
